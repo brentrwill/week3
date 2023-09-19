@@ -1,0 +1,134 @@
+Welcome to the Java Cheat Sheet
+
+- data types
+
+int is used for small values like 4, 244, 9000 or 100000
+
+    int small = 4;
+    int big = 244;
+    int bigger = 9000;
+    int evenBigger = 100000;
+
+double is a good data type for money values like, 4.56, 100.23, 500012.56
+
+    double small = 4.56;
+    double small = 100.23;
+    double small = 500012.56;
+    
+String is a data type but is special because it is actual an Object. Strings have methods we can use to help use do some coding.
+
+    String simpleString = "This-is-Simple";
+    String simpleString = new String("This-is-Simple");
+
+    System.out.println("Size of my String = " + simpleString.length());
+
+
+- brackets and statements
+
+    Coming soon.
+
+- if/else conditions
+
+if/else conditions are used all the time in coding. It gives us ways to control the flow of our code. Let's look at a simple check in english, then 
+write it in code.
+    
+    Let's say I have a bill that I need to pay, but I won't pay the bill if my checking account is less then the bill - $25.00. I don't want my account to go
+    below $25.00.
+
+    double checkingAccountTotal = 176.23;
+    double billTotal = ?;
+
+    if(checkingAccountTotal > billTotal) {
+        // Here we know that my checking account is greather then the bill
+        // but I am not sure the bill will empty my account so I need another check.
+        if((billTotal - checkingAccountTotal) < 25.00) {
+            // Here we know that if we subtract the billTotal from our account, we will drop below
+            // $25.00 so we will wait to pay the fill.
+            System.out.println("We can't pay right now because our account will go below $25.00.");
+        } else {
+            // We can pay the bill here because we will have enough in our account with the $25.00 cushion.
+            System.out.println("We will pay the bill of " + billTotal + " Our remaining balace is " + (checkingAccountTotal - billTotal));
+        }
+    } else {
+        System.out.println("We can't pay right now because we don't have enough to cover the bill.");
+    }
+
+
+- Math and boolean checks
+
+In Java we will use all kinds of ways to compare data types. Below is a list of common types and comparisons:
+    
+    int large = 12342;
+    int small = 2;
+    int larger = 13423524;
+
+    large > small - greater than
+    large >= small - greater than or equal too
+    large < small - less than
+    large <= small - less than or equal too
+    large == small - compare equality
+
+    large++; - adds 1 to large and assigns it to large
+    large--; - subtracts 1 to large and assigns it to large
+
+    large += large; - adds large + large and assigns it to large
+    large -= large; - adds large + large and assigns it to large
+    large /= large; - adds large + large and assigns it to large
+    large *= large; - adds large + large and assigns it to large
+
+    && - This means AND so if I am comparing 2 values, I want both of the conditions to be true. 
+    if((large > small) && (large < larger)) {
+        // This would be true and we would enter here because
+        // 12342 > 2 AND 12342 < 13423524 
+    }
+    
+    || - This means OR so if I am comparing 2 values, I want one of the conditions to be true.
+    if((large > small) || (large > larger)) {
+        // This would be true and we would enter here because
+        // 12342 > 2 OR 12342 > 13423524
+        // The first part of the check is true 
+    }
+
+- loops
+
+Loops are designed in Java to loop over some set of conditions. We use loops to count, print or to handle repeatative data.
+
+    // This code tells Java to repeat the action 10 times, within
+    // the for loop I am going to print counter 10 times which will
+    // be:
+    //  Counter : 0
+    //  ...
+    //  Counter : 9
+    for(int counter = 0; counter < 10; counter++) {
+        System.out.println("Counter : " + counter);
+    }
+
+    // Now lets add some checks inside the loop
+    for(int counter = 0; counter < 10; counter++) {
+        if(counter == 4) {
+            // Prints when counter is 4
+            System.out.println("Counter is 4");
+        } else if(counter < 10 && counter > 5) {
+            // Prints when counter is 6,7,8,9
+            System.out.println("Counter is < 10 but > 5");
+        } else {
+            // Prints when not 4 and not 6,7,8,9
+            System.out.println("Counter : " + counter);
+        }
+    }
+
+
+- arrays
+
+Arrays are nothing more then data types in a list. We will be able to use Arrays with loops and data types.
+
+    Array of integer.
+    int [] my_test_scores = {100, 97, 84, 89, 98};
+
+    Array of double.
+    int [] checking_debts = {17.23, 21.45, 39.56, 98.10, 1.23};
+
+    
+
+
+- methods
